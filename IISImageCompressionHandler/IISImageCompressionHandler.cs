@@ -120,7 +120,7 @@ namespace IISImageCompressionHandler
             string stdErrMessage = stdErr.ToString();
             if (stdErrMessage.Length > 0)
             {
-                context.Response.AppendToLog($"ERROR: Failed to reduce image quality by magick. CMD: {magickCommand}");
+                context.Response.AppendToLog($"IISImageCompressionHandler ERROR: Failed to reduce image size. CMD: {magickCommand}");
             }
             return stdErrMessage.Length < 1;
         }
